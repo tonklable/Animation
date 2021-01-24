@@ -29,8 +29,7 @@ objects=[[[2,3],[6,8]],[[7,6],[26,10]]].
 ```
 Figure 1: Example output of the objects from template
 ```
-The list ”objects” add two rectangular objects as in Figure 1. The first rect-
-angle has bottom-left and top-right coordinates at (2,3) and (6,8) respectively
+The list ”objects” add two rectangular objects as in Figure 1. The first rectangle has bottom-left and top-right coordinates at (2,3) and (6,8) respectively
 according to Cartesian coordinate with (0,0) at the bottom left of the frame as
 well as the second rectangle that has bottom-left and top-right coordinates at
 (7,6) and (26,10) respectively. These four coordinates are listed in the ”objects”
@@ -42,8 +41,8 @@ coordinates of the bottom-left and top-right edges of the rectangle.
 
 Since each rectangle has two coordinates (for bottom-left and top-right edges)
 so-called ”object variable”, value x and y of the coordinates are changed to list’s
-coordinates (yturns to list’s index calledy′andxturns to a digit of the number
-in each index calledx′). Then, x′ is used to calculate in the following function
+coordinates (yturns to list’s index called y′and x turns to a digit of the number
+in each index called x′). Then, x′ is used to calculate in the following function
 by for-loop.
 
 
@@ -51,7 +50,7 @@ f(x′) = 1 + 10<sup>2</sup> + 10<sup>3</sup> +...+ 10<sup>x</sup>
 
 Then,f(x) of the first coordinate minuses that of the second coordinate, and the
 result is taken to plus number in each index of the ”chosen” list (the proposed
-list) betweeny′of the first and second coordinates by using for-loop. Finally,
+list) between y′ of the first and second coordinates by using for-loop. Finally,
 for-loop is again used to run this mechanism for each rectangle’s coordinates
 given, and the ”result” list is assigned.
 
@@ -74,8 +73,7 @@ frames is fixed by time.sleep(0.05). Here is the process of each frame in set:
 2. Receive the ”chosen” list containing the picture of Mr.Dinosaur to be used
     in this frame from the frame before; for the first frame, use the proposed
     ”chosen” list (the list containing Mr.Dinosaur running on the ground).
-3. Assign an obstacle object variable in the template (by using if-else branch-
-    ing). (See Section 4.1 for cactus, and see Section 4.2 for pterodactyl.)
+3. Assign an obstacle object variable in the template (by using if-else branching). (See Section 4.1 for cactus, and see Section 4.2 for pterodactyl.)
 4. Print each line of the ”result” list from the template (by using for-loop).
     (See Section 2)
 5. Assign the ”chosen” list containing the picture of running, jumping or
@@ -127,16 +125,14 @@ that frame
 Mr.Dinosaur can jump and stoop. What he is going to do depends on the
 obstacle he meets. He jumps when a cactus is released, as he stoops when a
 pterodactyl is released.
-Mr.Dinosaur is illustrated by a set of number 5. The appearance of Mr.Dino-
-saur in each frame is assigned to the ”chosen” list indicating by the number of
+Mr.Dinosaur is illustrated by a set of number 5. The appearance of Mr.Dinosaur in each frame is assigned to the ”chosen” list indicating by the number of
 the frame and input. If the input is 1, Mr.Dinosaur needs to jump over the
 cactus. The cactus reaches Mr.Dinosaur in frame 15 and leaves in frame 22, so
 the chosen list is set to shift up after frame 14 and shift down after frame 22.
 Shifting up is coded by using for-loop in each index of the list; the value from
 the next index is assigned to the index before, and shifting down is an inverse
 of shifting up. Therefore, the chosen list is assigned for each frame.
-Moreover, if the input is 2, Mr.Dinosaur needs to stoop under the ptero-
-dactyl. The pterodactyl reaches Mr.Dinosaur between frames 14 and 25, so the
+Moreover, if the input is 2, Mr.Dinosaur needs to stoop under the pterodactyl. The pterodactyl reaches Mr.Dinosaur between frames 14 and 25, so the
 chosen list is changed to the stooping list in this interval. Hence, the chosen list
 is set to be used in the next frame.
 
